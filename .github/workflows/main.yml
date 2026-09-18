@@ -27,9 +27,10 @@ jobs:
       - name: Config Flutter
         run: flutter config --no-analytics
 
-      - name: Create Android Project Structure
-        run: flutter create . --platforms=android --org com.example
-
+      - name: Create Android Project
+        run: |
+          flutter create . --platforms=android --org com.example --project-name myapp
+          
       - name: Install dependencies
         run: flutter pub get
 
